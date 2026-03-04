@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:route66petwasteremoval": "node dist/route66petwasteremoval/server/server.mjs",
     "github-build": "ng build --configuration production --base-href 'https://vrchavez.github.io/route66petwasteremoval/'",
-    "github-deploy": "npx angular-cli-ghpages --dir=dist/route66petwasteremoval/browser --no-silent"
+    "github-deploy": "npx angular-cli-ghpages --dir=docs/browser --no-silent"
   },
   "prettier": {
     "printWidth": 100,
