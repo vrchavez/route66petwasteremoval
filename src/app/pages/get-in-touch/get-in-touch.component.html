@@ -1,0 +1,35 @@
+<div class="contact-container">
+  <h2>Get in Touch</h2>
+  <div *ngIf="prefillInfo" class="plan-summary">
+    <p><strong>You selected:</strong></p>
+    <pre>{{ prefillInfo }}</pre>
+  </div>
+  <form
+    ngNoForm
+    action="https://formsubmit.co/vrchavez11@gmail.com"
+    method="POST"
+    _next="/thank-you"
+    target="_blank"
+  >
+    <!-- FormSubmit hidden inputs -->
+    <input type="hidden" name="_subject" value="New contact from route66 site" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="sandwich" />
+    <!-- include plan info if present -->
+    <input *ngIf="prefillInfo" type="hidden" name="Plan Info" [value]="prefillInfo" />
+
+    <label for="name">Name</label>
+    <input id="name" type="text" [(ngModel)]="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input id="email" type="email" [(ngModel)]="email" name="email" required />
+
+    <label for="phone">Phone</label>
+    <input id="phone" type="tel" placeholder="(555) 123-4567" [(ngModel)]="phone" name="phone" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" [(ngModel)]="message" name="message" required></textarea>
+
+    <button type="submit" class="contact-button">Send</button>
+  </form>
+</div>

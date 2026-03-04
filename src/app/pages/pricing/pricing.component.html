@@ -1,0 +1,86 @@
+<div class="pricing-container">
+  <!-- Header -->
+  <div class="pricing-header">
+    <h1>Our Pricing</h1>
+    <p>Clear, transparent pricing for all your pet waste removal needs</p>
+  </div>
+
+  <!-- Special Offer Banner -->
+  <div class="special-offer">
+    <div class="offer-content">
+      <h3>🎉 Special Offer</h3>
+      <p>{{ specialOffer.frequency }} for {{ specialOffer.dogs }} dogs only <strong class="price-highlight">${{ specialOffer.price }}/{{ specialOffer.period }}</strong></p>
+    </div>
+  </div>
+
+  <!-- Pricing Grid -->
+  <div class="pricing-grid">
+    <div 
+      *ngFor="let option of pricingOptions"
+      class="pricing-card"
+      [class.highlight]="option.highlight"
+    >
+      <div class="card-header">
+        <h2>{{ option.name }}</h2>
+        <p class="frequency">{{ option.frequency }}</p>
+      </div>
+
+      <div class="pricing-plans">
+        <div 
+          *ngFor="let plan of option.plans"
+          class="plan-row"
+        >
+          <span class="dog-count">{{ plan.dogs }} {{ plan.dogs === 1 ? 'Dog' : 'Dogs' }}</span>
+          <span class="price-text">${{ plan.price }}</span>
+          <button class="select-button" (click)="scrollToTop()"
+                  [routerLink]="['/get-in-touch']"
+                  [queryParams]="{ plan: option.name, frequency: option.frequency, dogs: plan.dogs, price: plan.price }">
+            Select 
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Information Section -->
+  <div class="info-section">
+    <div class="info-box">
+      <h3>💡 How It Works</h3>
+      <ul>
+        <li>Choose your preferred frequency (weekly, bi-weekly, twice weekly, or monthly)</li>
+        <li>Select based on the number of dogs you have</li>
+        <li>We handle the rest! Professional cleanup on your schedule</li>
+        <li>All prices are per cleaning visit unless otherwise noted</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <h3>❓ FAQ</h3>
+      <div class="faq-item">
+        <p><strong>Can I change my plan?</strong></p>
+        <p>Absolutely! You can adjust your service frequency anytime.</p>
+      </div>
+      <div class="faq-item">
+        <p><strong>What about more than 4 dogs?</strong></p>
+        <p>Contact us for custom pricing on larger households!</p>
+      </div>
+      <div class="faq-item">
+        <p><strong>Is there a contract?</strong></p>
+        <p>No contracts required. Cancel anytime with proper notice.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="cta-footer">
+    <h2>Ready to get started?</h2>
+    <p>Contact us today to schedule your first cleanup</p>
+    <button class="contact-button">Get in Touch</button>
+  </div>
+
+  <!-- Back to Home -->
+  <div class="back-link">
+    <a routerLink="/">← Back to Home</a>
+  </div>
+</div>
