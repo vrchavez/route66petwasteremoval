@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-thank-you',
@@ -19,4 +20,12 @@ import { RouterLink } from '@angular/router';
      .primary-button a { text-decoration: none; color: inherit; }`
   ]
 })
-export class ThankYouComponent {}
+export class ThankYouComponent implements OnInit {
+  private title = inject(Title);
+  private meta = inject(Meta);
+
+  ngOnInit() {
+    this.title.setTitle('Thank You - Route 66 Pet Waste Removal');
+    this.meta.updateTag({ name: 'description', content: 'Thank you for your message. We have received your contact form and will respond soon.' });
+  }
+}

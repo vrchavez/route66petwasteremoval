@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-get-in-touch',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './get-in-touch.component.html',
   styleUrls: ['./get-in-touch.component.css']
 })
-export class GetInTouchComponent {
+export class GetInTouchComponent implements OnInit {
   // model fields bound to form controls
   name = '';
   email = '';
@@ -18,6 +19,9 @@ export class GetInTouchComponent {
   message = '';
 
   prefillInfo = '';
+
+  private title = inject(Title);
+  private meta = inject(Meta);
 
   constructor(private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
@@ -30,6 +34,11 @@ export class GetInTouchComponent {
         this.prefillInfo = lines.join('\n');
       }
     });
+  }
+
+  ngOnInit() {
+    this.title.setTitle('Get in Touch - Route 66 Pet Waste Removal');
+    this.meta.updateTag({ name: 'description', content: 'Contact Route 66 Pet Waste Removal for professional pet waste cleanup services. Get a quote or schedule your service today.' });
   }
 
   onSubmit(): void {
