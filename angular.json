@@ -15,7 +15,6 @@
           "options": {
             "outputPath": "docs",
             "browser": "src/main.ts",
-            "baseHref": "/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
