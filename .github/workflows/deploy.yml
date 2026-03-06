@@ -27,7 +27,7 @@ jobs:
         run: npm install -g @angular/cli
       
       - name: Build
-        run: ng build --base-href "https://vrchavez.github.io/route66petwasteremoval/"
+        run: npm run build
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
