@@ -1,8 +1,3 @@
 {
-  "routes": {
-    "/": {},
-    "/get-in-touch": {},
-    "/pricing": {},
-    "/thank-you": {}
-  }
+  "routes": {}
 }
