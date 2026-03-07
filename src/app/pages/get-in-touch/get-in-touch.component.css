@@ -66,6 +66,54 @@ textarea {
 }
 
 .submission-result {
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      margin: 2rem auto;
+      padding: 1.5rem 1rem;
+      width: 90%;
+      max-width: 90vw;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-container h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .plan-summary {
+      padding: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    label {
+      font-size: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.65rem 0.75rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .contact-button {
+      padding: 0.9rem;
+      font-size: 1rem;
+      margin-top: 1.25rem;
+      width: 100%;
+    }
+
+    .submission-result {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  }
   margin-top: 1rem;
   color: #333;
   font-weight: bold;

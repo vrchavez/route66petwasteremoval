@@ -291,42 +291,107 @@
 @media (max-width: 768px) {
   .pricing-container {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-header {
+    width: 100%;
+    text-align: center;
   }
 
   .pricing-header h1 {
     font-size: 2rem;
   }
 
+  .pricing-header p {
+    font-size: 1rem;
+  }
+
+  .special-offer {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .offer-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .offer-content p {
+    font-size: 1.1rem;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-card {
+    width: 100%;
   }
 
   .pricing-card.highlight {
     transform: scale(1);
   }
 
-  .special-offer {
-    padding: 1.5rem;
+  .plan-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
   }
 
-  .offer-content h3 {
-    font-size: 1.2rem;
+  .dog-count {
+    flex: 1;
+    text-align: left;
   }
 
-  .offer-content p {
+  .price {
+    flex: 1;
+    text-align: center;
+  }
+
+  .select-button,
+  .contact-button {
+    width: 80%;
+    max-width: 200px;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
+  }
+
+  .contact-button {
+    margin: 1rem auto;
+    display: block;
   }
 
   .info-section {
     grid-template-columns: 1fr;
     padding: 1.5rem;
+    width: 100%;
+  }
+
+  .info-box {
+    padding: 1.5rem;
   }
 
   .cta-footer {
     padding: 2rem 1rem;
+    width: 100%;
   }
 
   .cta-footer h2 {
     font-size: 1.5rem;
+  }
+
+  .back-link {
+    text-align: center;
+    width: 100%;
   }
 }
