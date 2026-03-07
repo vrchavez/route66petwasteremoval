@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -24,18 +24,12 @@ interface FrequencyOption {
   styleUrl: './pricing.component.css'
 })
 export class PricingComponent implements OnInit {
-  constructor(private router: Router) {}
-
   private title = inject(Title);
   private meta = inject(Meta);
 
   ngOnInit() {
     this.title.setTitle('Pricing - Route 66 Pet Waste Removal');
     this.meta.updateTag({ name: 'description', content: 'View our transparent pricing for pet waste removal services. Flexible plans for weekly, bi-weekly, and monthly cleanups.' });
-  }
-
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   pricingOptions: FrequencyOption[] = [

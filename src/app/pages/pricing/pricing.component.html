@@ -32,7 +32,7 @@
         >
           <span class="dog-count">{{ plan.dogs }} {{ plan.dogs === 1 ? 'Dog' : 'Dogs' }}</span>
           <span class="price-text">${{ plan.price }}</span>
-          <button class="select-button" (click)="scrollToTop()"
+          <button class="select-button"
                   [routerLink]="['/get-in-touch']"
                   [queryParams]="{ plan: option.name, frequency: option.frequency, dogs: plan.dogs, price: plan.price }">
             Select 
