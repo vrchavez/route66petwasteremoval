@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "docs",
             "browser": "src/main.ts",
-            "baseHref": "/route66petwasteremoval/",
+            "baseHref": "/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
