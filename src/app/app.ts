@@ -25,7 +25,7 @@ export class App {
       { property: 'og:description', content: 'Professional pet waste cleanup services for a cleaner, healthier yard.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://route66petwasteremoval.com/' },
-      { property: 'og:image', content: 'https://route66petwasteremoval.com/truckPicv3.png' }
+      { property: 'og:image', content: 'https://route66petwasteremoval.com/Route66PEtWaste.png' }
     ]);
   }
 }
